@@ -1,0 +1,31 @@
+﻿@model CompanyManagement.Models.UpdateCompanyViewModel
+@{
+}
+<h1>Edit Company</h1>
+<form method="post" action="View" class="mt-5">
+
+    <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" class="form-control" asp-for="Id" readonly>
+    </div>
+
+    <div class="mb-3">
+        <label for="" class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Adress</label>
+        <input type="text" class="form-control" asp-for="Address">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Contact</label>
+        <input type="text" class="form-control" asp-for="Contact">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Email</label>
+        <input type="email" class="form-control" asp-for="Email">
+    </div>
+
+    <button type="submit" class="btn btn-primary" >Edit</button>
+    <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Company">Delete</button>
+</form>

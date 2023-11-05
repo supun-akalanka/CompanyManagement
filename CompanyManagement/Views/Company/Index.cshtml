@@ -1,0 +1,28 @@
+﻿@model List<CompanyManagement.Models.Company>
+@{
+}
+<h1>Company List</h1>
+<table class="table">
+   <thead>
+       <tr>
+            @*<th>Id</th>*@
+           <th>Name</th>
+           <th>Address</th>
+           <th>Contact</th>
+           <th>Email</th>
+       </tr>
+   </thead>
+   <tbody>
+       @foreach(var company in Model)
+       {
+            <tr>
+                @*<td>@company.Id</td>*@
+                <td>@company.Name</td>
+                <td>@company.Address</td>
+                <td>@company.Contact</td>
+                <td>@company.Email</td>
+                <td><a href="Company/View/@company.Id">Edit or Delete</a></td>
+            </tr>
+       }
+    </tbody>
+</table>
